@@ -1,0 +1,111 @@
+body {
+    background: #DDC5A2;
+}
+.thead {
+    width: 100%;
+    height: 150px;
+    margin-top: 0px;
+}
+#center {
+    display: block;
+    background: #301B28;
+    margin: 0px auto;
+    width: auto;
+    height: 150px;
+    margin-top: -20px;
+}
+#titulo h1 {
+    text-align: center;
+    padding-top: 47px;
+    font-weight: bold;
+    font-size: 40px;
+    color: #DDC5A2;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.clearfix {
+    clear: both;
+    float: none;
+}
+.tbody {
+    width: 100%;
+    height: 500px;
+    margin-top: 0px;
+}
+#cuerpo {
+    background: #523634;
+    width: auto;
+    height: 500px;
+    margin: 0px auto;
+}
+#titulo2 {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+    color: #DDC5A2;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 20px;
+    padding-top: 5px;
+}
+#definicion p {
+    display: block;
+    text-align: justify;
+    font-weight: bold;
+    font-size: 17px;
+    color: #DDC5A2;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 15px;
+}
+.footer {
+    background: #B6452C;
+    width: 100%;
+    height: 70px;
+    float: unset;
+    margin-top: 5px;
+}
+#copy {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    color: #DDC5A2;
+    padding-top: 22px;
+}
+#boton {
+    display: block;
+    margin: 0px auto;
+}
+#btn {
+    display: block;
+    background: #301B28;
+    color: #DDC5A2;
+    border: none;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    height: 50px;
+    width: 150px;
+    border-radius: 5%;
+    margin: 0px auto;
+    cursor: pointer;
+}
+#btn:hover{
+    background: #B6452C;
+}
+#tb {
+    display: block;
+    margin: 0px auto;
+}
+#tabla {
+    border: 2px solid #DDC5A2;
+    margin-left: 20px;
+}
+input {
+    background: transparent;
+    border: 2px solid #DDC5A2;
+    height: 30px;
+    width: 150px;
+    color: #DDC5A2;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
