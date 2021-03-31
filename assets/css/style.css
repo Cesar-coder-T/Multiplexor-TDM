@@ -103,8 +103,8 @@ body {
 input {
     background: transparent;
     border: 2px solid #DDC5A2;
-    height: 30px;
-    width: 150px;
+    height: 50px;
+    width: 80px;
     color: #DDC5A2;
     text-align: center;
     font-size: 15px;
@@ -127,4 +127,21 @@ input {
 }
 #btn2:hover {
     background: #B6452C;
+}
+#mux {
+    display: block;
+    height: 200px;
+    margin-left: 307px;
+    margin-top: -182px;
+}
+#dmux {
+    display: block;
+    height: 200px;
+    margin-left: 842px;
+    margin-top: -182px;
+}
+#tabla2 {
+    border: 2px solid #DDC5A2;
+    margin-left: 404px;
+    margin-top: -147px;
 }
