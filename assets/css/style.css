@@ -98,6 +98,7 @@ body {
 #tabla {
     border: 2px solid #DDC5A2;
     margin-left: 20px;
+    margin-top: 50px;
 }
 input {
     background: transparent;
@@ -108,4 +109,22 @@ input {
     text-align: center;
     font-size: 15px;
     font-weight: bold;
+}
+#btn2 {
+    display: block;
+    background: #301B28;
+    color: #DDC5A2;
+    border: none;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    height: 50px;
+    width: 150px;
+    border-radius: 5%;
+    margin-top: -70px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+#btn2:hover {
+    background: #B6452C;
 }
