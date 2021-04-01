@@ -31,15 +31,16 @@ function demultiplexarSc(){
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-var A3 = null; var A2 = null; var A1 = null;
-var B3 = null; var B2 = null; var B1 = null;
-var C3 = null; var C2 = null; var C1 = null;
+var V7 = null; var V4 = null; var V1 = null;
+var V8 = null; var V5 = null; var V2 = null;
+var V9 = null; var V6 = null; var V3 = null;
 var vector = new Array();
+var aux = new Array();
 function guardarDatosAsc(){
 
-    A3 = document.getElementById("7").value; A2 = document.getElementById("4").value; A1 = document.getElementById("1").value;
-    B3 = document.getElementById("8").value; B2 = document.getElementById("5").value; B1 = document.getElementById("2").value;
-    C3 = document.getElementById("9").value; C2 = document.getElementById("6").value; C1 = document.getElementById("3").value;
+    V7 = document.getElementById("7").value; V4 = document.getElementById("4").value; V1 = document.getElementById("1").value;
+    V8 = document.getElementById("8").value; V5 = document.getElementById("5").value; V2 = document.getElementById("2").value;
+    V9 = document.getElementById("9").value; V6 = document.getElementById("6").value; V3 = document.getElementById("3").value;
 
     for(var i=1; i<=9; i++){
         vector[i] = document.getElementById(i).value;
@@ -148,9 +149,336 @@ function multiplexarAsc(){
         }
     }
 
+    /*Se evalua que valor es el primero para asignrle el respectivo nombre.
+    Posición 1*/
+    if(vector[1] == V1){
+        aux[1] = "A1";
+    }else{
+        if(vector[1] == V2){
+            aux[1] = "B1";
+        }else{
+            if(vector[1] == V3){
+                aux[1] = "C1";
+            }
+        } 
+    }
+
+    if(vector[1] == V4){
+        aux[1] = "A2";
+    }else{
+        if(vector[1] == V5){
+            aux[1] = "B2";
+        }else{
+            if(vector[1] == V6){
+                aux[1] = "C2";
+            }
+        } 
+    }
+
+    if(vector[1] == V7){
+        aux[1] = "A3";
+    }else{
+        if(vector[1] == V8){
+            aux[1] = "B3";
+        }else{
+            if(vector[1] == V9){
+                aux[1] = "C3";
+            }
+        } 
+    }
+    //Posición 2
+    if(vector[2] == V1){
+        aux[2] = "A1";
+    }else{
+        if(vector[2] == V2){
+            aux[2] = "B1";
+        }else{
+            if(vector[2] == V3){
+                aux[2] = "C1";
+            }
+        } 
+    }
+
+    if(vector[2] == V4){
+        aux[2] = "A2";
+    }else{
+        if(vector[2] == V5){
+            aux[2] = "B2";
+        }else{
+            if(vector[2] == V6){
+                aux[2] = "C2";
+            }
+        } 
+    }
+
+    if(vector[2] == V7){
+        aux[2] = "A3";
+    }else{
+        if(vector[2] == V8){
+            aux[2] = "B3";
+        }else{
+            if(vector[2] == V9){
+                aux[2] = "C3";
+            }
+        } 
+    }
+    //Posición 3
+    if(vector[3] == V1){
+        aux[3] = "A1";
+    }else{
+        if(vector[3] == V2){
+            aux[3] = "B1";
+        }else{
+            if(vector[3] == V3){
+                aux[3] = "C1";
+            }
+        } 
+    }
+
+    if(vector[3] == V4){
+        aux[3] = "A2";
+    }else{
+        if(vector[3] == V5){
+            aux[3] = "B2";
+        }else{
+            if(vector[3] == V6){
+                aux[3] = "C2";
+            }
+        } 
+    }
+
+    if(vector[3] == V7){
+        aux[3] = "A3";
+    }else{
+        if(vector[3] == V8){
+            aux[3] = "B3";
+        }else{
+            if(vector[3] == V9){
+                aux[3] = "C3";
+            }
+        } 
+    }
+    //Posición 4
+    if(vector[4] == V1){
+        aux[4] = "A1";
+    }else{
+        if(vector[4] == V2){
+            aux[4] = "B1";
+        }else{
+            if(vector[4] == V3){
+                aux[4] = "C1";
+            }
+        } 
+    }
+
+    if(vector[4] == V4){
+        aux[4] = "A2";
+    }else{
+        if(vector[4] == V5){
+            aux[4] = "B2";
+        }else{
+            if(vector[4] == V6){
+                aux[4] = "C2";
+            }
+        } 
+    }
+
+    if(vector[4] == V7){
+        aux[4] = "A3";
+    }else{
+        if(vector[4] == V8){
+            aux[4] = "B3";
+        }else{
+            if(vector[4] == V9){
+                aux[4] = "C3";
+            }
+        } 
+    }
+    //Posición 5
+    if(vector[5] == V1){
+        aux[5] = "A1";
+    }else{
+        if(vector[5] == V2){
+            aux[5] = "B1";
+        }else{
+            if(vector[5] == V3){
+                aux[5] = "C1";
+            }
+        } 
+    }
+
+    if(vector[5] == V4){
+        aux[5] = "A2";
+    }else{
+        if(vector[5] == V5){
+            aux[5] = "B2";
+        }else{
+            if(vector[5] == V6){
+                aux[5] = "C2";
+            }
+        } 
+    }
+
+    if(vector[5] == V7){
+        aux[5] = "A3";
+    }else{
+        if(vector[5] == V8){
+            aux[5] = "B3";
+        }else{
+            if(vector[5] == V9){
+                aux[5] = "C3";
+            }
+        } 
+    }
+    //Posición 6
+    if(vector[6] == V1){
+        aux[6] = "A1";
+    }else{
+        if(vector[6] == V2){
+            aux[6] = "B1";
+        }else{
+            if(vector[6] == V3){
+                aux[6] = "C1";
+            }
+        } 
+    }
+
+    if(vector[6] == V4){
+        aux[6] = "A2";
+    }else{
+        if(vector[6] == V5){
+            aux[6] = "B2";
+        }else{
+            if(vector[6] == V6){
+                aux[6] = "C2";
+            }
+        } 
+    }
+
+    if(vector[6] == V7){
+        aux[6] = "A3";
+    }else{
+        if(vector[6] == V8){
+            aux[6] = "B3";
+        }else{
+            if(vector[6] == V9){
+                aux[6] = "C3";
+            }
+        } 
+    }
+    //Posición 7
+    if(vector[7] == V1){
+        aux[7] = "A1";
+    }else{
+        if(vector[7] == V2){
+            aux[7] = "B1";
+        }else{
+            if(vector[7] == V3){
+                aux[7] = "C1";
+            }
+        } 
+    }
+
+    if(vector[7] == V4){
+        aux[7] = "A2";
+    }else{
+        if(vector[7] == V5){
+            aux[7] = "B2";
+        }else{
+            if(vector[7] == V6){
+                aux[7] = "C2";
+            }
+        } 
+    }
+
+    if(vector[7] == V7){
+        aux[7] = "A3";
+    }else{
+        if(vector[7] == V8){
+            aux[7] = "B3";
+        }else{
+            if(vector[7] == V9){
+                aux[7] = "C3";
+            }
+        } 
+    }
+    //Posición 8
+    if(vector[8] == V1){
+        aux[8] = "A1";
+    }else{
+        if(vector[8] == V2){
+            aux[8] = "B1";
+        }else{
+            if(vector[8] == V3){
+                aux[8] = "C1";
+            }
+        } 
+    }
+
+    if(vector[8] == V4){
+        aux[8] = "A2";
+    }else{
+        if(vector[8] == V5){
+            aux[8] = "B2";
+        }else{
+            if(vector[8] == V6){
+                aux[8] = "C2";
+            }
+        } 
+    }
+
+    if(vector[8] == V7){
+        aux[8] = "A3";
+    }else{
+        if(vector[8] == V8){
+            aux[8] = "B3";
+        }else{
+            if(vector[8] == V9){
+                aux[8] = "C3";
+            }
+        } 
+    }
+    //Posición 9
+    if(vector[9] == V1){
+        aux[9] = "A1";
+    }else{
+        if(vector[9] == V2){
+            aux[9] = "B1";
+        }else{
+            if(vector[9] == V3){
+                aux[9] = "C1";
+            }
+        } 
+    }
+
+    if(vector[9] == V4){
+        aux[9] = "A2";
+    }else{
+        if(vector[9] == V5){
+            aux[9] = "B2";
+        }else{
+            if(vector[9] == V6){
+                aux[9] = "C2";
+            }
+        } 
+    }
+
+    if(vector[9] == V7){
+        aux[9] = "A3";
+    }else{
+        if(vector[9] == V8){
+            aux[9] = "B3";
+        }else{
+            if(vector[9] == V9){
+                aux[9] = "C3";
+            }
+        } 
+    }
+
     //Se muestran los datos en la trama.
     for(var i=1; i<=vector.length; i++){
         if( i != vector.length){
+            document.getElementById("lb"+(i)).innerHTML = aux[i];
             document.getElementById("TR"+(i)).value = vector[i];
         }
     }
@@ -158,15 +486,15 @@ function multiplexarAsc(){
 }
 function demultiplexarAsc(){
 
-    document.getElementById("A3AS").value = document.getElementById("7").value; 
-    document.getElementById("A2AS").value = document.getElementById("4").value; 
-    document.getElementById("A1AS").value = document.getElementById("1").value;
-    document.getElementById("B3AS").value = document.getElementById("8").value; 
-    document.getElementById("B2AS").value = document.getElementById("5").value; 
-    document.getElementById("B1AS").value = document.getElementById("2").value;
-    document.getElementById("C3AS").value = document.getElementById("9").value; 
-    document.getElementById("C2AS").value = document.getElementById("6").value; 
-    document.getElementById("C1AS").value = document.getElementById("3").value;
+    document.getElementById("A3AS").value = V7; 
+    document.getElementById("A2AS").value = V4; 
+    document.getElementById("A1AS").value = V1;
+    document.getElementById("B3AS").value = V8; 
+    document.getElementById("B2AS").value = V5; 
+    document.getElementById("B1AS").value = V2;
+    document.getElementById("C3AS").value = V9; 
+    document.getElementById("C2AS").value = V6; 
+    document.getElementById("C1AS").value = V3;
     
 }
 
