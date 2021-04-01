@@ -96,8 +96,10 @@ function multiplexarAsc(){
         }
     }
     for(var i=1; i<=vector.length; i++){
-        console.log(vector[i]);
-        document.getElementById("TR"+(i)).value = vector[i];
+        if( i != vector.length ){
+            console.log(vector[i]);
+            document.getElementById("TR"+(i)).value = vector[i];
+        }
     }
 
     //console.log(A1+" "+A2+" "+A3+" "+B1+" "+B2+" "+B3+" "+C1+" "+C2+" "+C3);
@@ -109,15 +111,15 @@ function multiplexarAsc(){
 }
 function demultiplexarAsc(){
 
-    document.getElementById("A3AS").value = document.getElementById("TR7").value; 
-    document.getElementById("A2AS").value = document.getElementById("TR4").value; 
-    document.getElementById("A1AS").value = document.getElementById("TR1").value;
-    document.getElementById("B3AS").value = document.getElementById("TR8").value; 
-    document.getElementById("B2AS").value = document.getElementById("TR5").value; 
-    document.getElementById("B1AS").value = document.getElementById("TR2").value;
-    document.getElementById("C3AS").value = document.getElementById("TR9").value; 
-    document.getElementById("C2AS").value = document.getElementById("TR6").value; 
-    document.getElementById("C1AS").value = document.getElementById("TR3").value;
+    document.getElementById("A3AS").value = document.getElementById("7").value; 
+    document.getElementById("A2AS").value = document.getElementById("4").value; 
+    document.getElementById("A1AS").value = document.getElementById("1").value;
+    document.getElementById("B3AS").value = document.getElementById("8").value; 
+    document.getElementById("B2AS").value = document.getElementById("5").value; 
+    document.getElementById("B1AS").value = document.getElementById("2").value;
+    document.getElementById("C3AS").value = document.getElementById("9").value; 
+    document.getElementById("C2AS").value = document.getElementById("6").value; 
+    document.getElementById("C1AS").value = document.getElementById("3").value;
     
 }
 
