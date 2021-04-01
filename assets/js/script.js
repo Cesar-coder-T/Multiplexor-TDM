@@ -34,18 +34,90 @@ function demultiplexarSc(){
 var A3 = null; var A2 = null; var A1 = null;
 var B3 = null; var B2 = null; var B1 = null;
 var C3 = null; var C2 = null; var C1 = null;
-function multiplexarAsc(){
-    
-    A3 = document.getElementById("A3").value; A2 = document.getElementById("A2").value; A1 = document.getElementById("A1").value;
-    B3 = document.getElementById("B3").value; B2 = document.getElementById("B2").value; B1 = document.getElementById("B1").value;
-    C3 = document.getElementById("C3").value; C2 = document.getElementById("C2").value; C1 = document.getElementById("C1").value;
+var vector = new Array();
+function guardarDatosAsc(){
 
-    document.getElementById("TR1S").value = A1S; document.getElementById("TR2S").value = B1S; document.getElementById("TR3S").value = C1S;
-    document.getElementById("TR4S").value = A2S; document.getElementById("TR5S").value = B2S; document.getElementById("TR6S").value = C2S;
-    document.getElementById("TR7S").value = A3S; document.getElementById("TR8S").value = B3S; document.getElementById("TR9S").value = C3S;
-   
+    A3 = document.getElementById("7").value; A2 = document.getElementById("4").value; A1 = document.getElementById("1").value;
+    B3 = document.getElementById("8").value; B2 = document.getElementById("5").value; B1 = document.getElementById("2").value;
+    C3 = document.getElementById("9").value; C2 = document.getElementById("6").value; C1 = document.getElementById("3").value;
+
+    for(var i=1; i<=9; i++){
+        vector[i] = document.getElementById(i).value;
+    }
+
+}
+
+function multiplexarAsc(){
+
+    for(var i=1; i<=vector.length; i++){
+        if(vector[i] == "" && vector[i+1] != "" ){
+            vector[i] = vector[i+1];
+             vector.splice((i+1),1);
+        }else{
+            if(vector[i+1] == "" && vector[i+2] != "" ){
+                vector[i] = vector[i+2];
+                vector.splice((i+2),1);
+            }else{
+                if(vector[i+2] == "" && vector[i+3] != "" ){
+                    vector[i] = vector[i+3];
+                    vector.splice((i+3),1);
+                }else{
+                    if(vector[i+3] == "" && vector[i+4] != "" ){
+                        vector[i] = vector[i+4];
+                        vector.splice((i+4),1);
+                    }else{
+                        if(vector[i+4] == "" && vector[i+5] != "" ){
+                            vector[i] = vector[i+5];
+                            vector.splice((i+5),1);
+                        }else{
+                            if(vector[i+5] == "" && vector[i+6] != "" ){
+                                vector[i] = vector[i+6];
+                                vector.splice((i+6),1);
+                            }else{
+                                if(vector[i+6] == "" && vector[i+7] != "" ){
+                                    vector[i] = vector[i+7];
+                                    vector.splice((i+7),1);
+                                }else{
+                                    if(vector[i+7] == "" && vector[i+8] != "" ){
+                                        vector[i] = vector[i+8];
+                                        vector.splice((i+8),1);
+                                    }else{
+                                        if(vector[i+8] == "" && vector[i+9] != "" ){
+                                            vector[i] = vector[i+9];
+                                            vector.splice((i+9),1);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    for(var i=1; i<=vector.length; i++){
+        console.log(vector[i]);
+        document.getElementById("TR"+(i)).value = vector[i];
+    }
+
+    //console.log(A1+" "+A2+" "+A3+" "+B1+" "+B2+" "+B3+" "+C1+" "+C2+" "+C3);
+
+    /*document.getElementById("TR1").value = A1; document.getElementById("TR2").value = B1; document.getElementById("TR3").value = C1;
+    document.getElementById("TR4").value = A2; document.getElementById("TR5").value = B2; document.getElementById("TR6").value = C2;
+    document.getElementById("TR7").value = A3; document.getElementById("TR8").value = B3; document.getElementById("TR9").value = C3;
+    */
 }
 function demultiplexarAsc(){
-    alert("Demultiplexar Sícrono");
+
+    document.getElementById("A3AS").value = document.getElementById("TR7").value; 
+    document.getElementById("A2AS").value = document.getElementById("TR4").value; 
+    document.getElementById("A1AS").value = document.getElementById("TR1").value;
+    document.getElementById("B3AS").value = document.getElementById("TR8").value; 
+    document.getElementById("B2AS").value = document.getElementById("TR5").value; 
+    document.getElementById("B1AS").value = document.getElementById("TR2").value;
+    document.getElementById("C3AS").value = document.getElementById("TR9").value; 
+    document.getElementById("C2AS").value = document.getElementById("TR6").value; 
+    document.getElementById("C1AS").value = document.getElementById("TR3").value;
+    
 }
 

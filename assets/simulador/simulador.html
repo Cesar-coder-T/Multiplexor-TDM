@@ -33,44 +33,56 @@
                     <table id="tabla">
                         <tr>
                             <td>
-                                <input id="A3S" type="text" placeholder="A3" oninput="gurdarDatosSc()">
-                                <input id="A2S" type="text" placeholder="A2" oninput="gurdarDatosSc()">
-                                <input id="A1S" type="text" placeholder="A1" oninput="gurdarDatosSc()">
+                                <input id="A3S" type="text" placeholder="A3" oninput="guardarDatosSc()">
+                                <input id="A2S" type="text" placeholder="A2" oninput="guardarDatosSc()">
+                                <input id="A1S" type="text" placeholder="A1" oninput="guardarDatosSc()">
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <input id="B3S" type="text" placeholder="B3" oninput="gurdarDatosSc()">
-                                <input id="B2S" type="text" placeholder="B2" oninput="gurdarDatosSc()">
-                                <input id="B1S" type="text" placeholder="B1" oninput="gurdarDatosSc()">
+                                <input id="B3S" type="text" placeholder="B3" oninput="guardarDatosSc()">
+                                <input id="B2S" type="text" placeholder="B2" oninput="guardarDatosSc()">
+                                <input id="B1S" type="text" placeholder="B1" oninput="guardarDatosSc()">
                                 
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <input id="C3S" type="text" placeholder="C3" oninput="gurdarDatosSc()">
-                                <input id="C2S" type="text" placeholder="C2" oninput="gurdarDatosSc()">
-                                <input id="C1S" type="text" placeholder="C1" oninput="gurdarDatosSc()">
+                                <input id="C3S" type="text" placeholder="C3" oninput="guardarDatosSc()">
+                                <input id="C2S" type="text" placeholder="C2" oninput="guardarDatosSc()">
+                                <input id="C1S" type="text" placeholder="C1" oninput="guardarDatosSc()">
                             </td>
                         </tr>
                     </table>
                 </div>
                 <div id="imgMux">
-                    <img src="../img/MUX2.png" id="mux" title="Multiplexar" onclick="multiplexarAsc()">
+                    <img src="../img/MUX2.png" id="mux" title="Multiplexar" onclick="multiplexarSc()">
                 </div>
                 <div id="tb">
                     <table id="tabla2A">
                         <tr>
-                            <td></td>
+                            <td id="td1">
+                                <h2>TRAMA 3</h2>
+                            </td>
+                            <td id="td1">
+                                <h2>TRAMA 2</h2>
+                            </td>
+                            <td id="td1">
+                                <h2>TRAMA 1</h2>
+                            </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td id="td2">
                                 <input id="TR9S" type="text" readonly>
                                 <input id="TR8S" type="text" readonly>
                                 <input id="TR7S" type="text" readonly>
+                            </td>
+                            <td id="td2">
                                 <input id="TR6S" type="text" readonly>
                                 <input id="TR5S" type="text" readonly>
                                 <input id="TR4S" type="text" readonly>
+                            </td>
+                            <td id="td2">
                                 <input id="TR3S" type="text" readonly>
                                 <input id="TR2S" type="text" readonly>
                                 <input id="TR1S" type="text" readonly>
@@ -88,24 +100,23 @@
                     <table id="tabla3">
                         <tr>
                             <td>
-                                <input id="A1SC" type="text" placeholder="A1" readonly>
-                                <input id="A2SC" type="text" placeholder="A2" readonly>
                                 <input id="A3SC" type="text" placeholder="A3" readonly>
+                                <input id="A2SC" type="text" placeholder="A2" readonly>
+                                <input id="A1SC" type="text" placeholder="A1" readonly>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <input id="B1SC" type="text" placeholder="B1" readonly>
-                                <input id="B2SC" type="text" placeholder="B2" readonly>
                                 <input id="B3SC" type="text" placeholder="B3" readonly>
-                                
+                                <input id="B2SC" type="text" placeholder="B2" readonly>
+                                <input id="B1SC" type="text" placeholder="B1" readonly>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <input id="C1SC" type="text" placeholder="C1" readonly>
-                                <input id="C2SC" type="text" placeholder="C2" readonly>
                                 <input id="C3SC" type="text" placeholder="C3" readonly>
+                                <input id="C2SC" type="text" placeholder="C2" readonly>
+                                <input id="C1SC" type="text" placeholder="C1" readonly>
                             </td>
                         </tr>
                     </table>
@@ -123,30 +134,30 @@
                     <table id="tabla">
                         <tr>
                             <td>
-                                <input id="A3" type="text" placeholder="A3">
-                                <input id="A2" type="text" placeholder="A2">
-                                <input id="A1" type="text" placeholder="A1">
+                                <input id="7" type="text" placeholder="A3" oninput="guardarDatosAsc()">
+                                <input id="4" type="text" placeholder="A2" oninput="guardarDatosAsc()" onchange="guardarDatosAsc()">
+                                <input id="1" type="text" placeholder="A1" oninput="guardarDatosAsc()">
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <input id="B3" type="text" placeholder="B3">
-                                <input id="B2" type="text" placeholder="B2">
-                                <input id="B1" type="text" placeholder="B1">
+                                <input id="8" type="text" placeholder="B3" oninput="guardarDatosAsc()">
+                                <input id="5" type="text" placeholder="B2" oninput="guardarDatosAsc()">
+                                <input id="2" type="text" placeholder="B1" oninput="guardarDatosAsc()">
                                 
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <input id="C3" type="text" placeholder="C3">
-                                <input id="C2" type="text" placeholder="C2">
-                                <input id="C1" type="text" placeholder="C1">
+                                <input id="9" type="text" placeholder="C3" oninput="guardarDatosAsc()">
+                                <input id="6" type="text" placeholder="C2" oninput="guardarDatosAsc()">
+                                <input id="3" type="text" placeholder="C1" oninput="guardarDatosAsc()">
                             </td>
                         </tr>
                     </table>
                 </div>
                 <div id="imgMux">
-                    <img src="../img/MUX2.png" id="mux" title="Multiplexar" onclick="multiplexarSc()">
+                    <img src="../img/MUX2.png" id="mux" class="muxAsc" title="Multiplexar" onclick="multiplexarAsc()">
                 </div>
                 <div id="tb">
                     <table id="tabla2">
@@ -173,30 +184,29 @@
                     </table>
                 </div>
                 <div id="imgDmux">
-                    <img src="../img/DEMUX.png" id="dmux" title="Demultiplexar" onclick="demultiplexarSc()">
+                    <img src="../img/DEMUX.png" id="dmux" title="Demultiplexar" onclick="demultiplexarAsc()">
                 </div>
                 <div id="tb">
                     <table id="tabla3">
                         <tr>
                             <td>
-                                <input id="A1" type="text" placeholder="A1" readonly>
-                                <input id="A2" type="text" placeholder="A2" readonly>
-                                <input id="A3" type="text" placeholder="A3" readonly>
+                                <input id="A3AS" type="text" placeholder="A3" readonly>
+                                <input id="A2AS" type="text" placeholder="A2" readonly>
+                                <input id="A1AS" type="text" placeholder="A1" readonly>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <input id="B1" type="text" placeholder="B1" readonly>
-                                <input id="B2" type="text" placeholder="B2" readonly>
-                                <input id="B3" type="text" placeholder="B3" readonly>
-                                
+                                <input id="B3AS" type="text" placeholder="B3" readonly>
+                                <input id="B2AS" type="text" placeholder="B2" readonly>
+                                <input id="B1AS" type="text" placeholder="B1" readonly>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <input id="C1" type="text" placeholder="C1" readonly>
-                                <input id="C2" type="text" placeholder="C2" readonly>
-                                <input id="C3" type="text" placeholder="C3" readonly>
+                                <input id="C3AS" type="text" placeholder="C3" readonly>
+                                <input id="C2AS" type="text" placeholder="C2" readonly>
+                                <input id="C1AS" type="text" placeholder="C1" readonly>
                             </td>
                         </tr>
                     </table>
