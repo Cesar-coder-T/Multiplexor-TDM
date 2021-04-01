@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script src="../js/script.js"></script>
     <title>Multiplexor</title>
 </head>
 <body>
@@ -17,7 +18,7 @@
         </div>
     </thead>
     <tbody class="tbody">
-        <div id="cuerpo">
+        <div id="cuerpo2">
             <div id="titulo2">
                 <h1>Simulador</h1>
             </div>
@@ -32,48 +33,47 @@
                     <table id="tabla">
                         <tr>
                             <td>
-                                <input id="A3" type="text" placeholder="A3">
-                                <input id="A2" type="text" placeholder="A2">
-                                <input id="A1" type="text" placeholder="A1">
+                                <input id="A3S" type="text" placeholder="A3" oninput="gurdarDatosSc()">
+                                <input id="A2S" type="text" placeholder="A2" oninput="gurdarDatosSc()">
+                                <input id="A1S" type="text" placeholder="A1" oninput="gurdarDatosSc()">
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <input id="B3" type="text" placeholder="B3">
-                                <input id="B2" type="text" placeholder="B2">
-                                <input id="B1" type="text" placeholder="B1">
+                                <input id="B3S" type="text" placeholder="B3" oninput="gurdarDatosSc()">
+                                <input id="B2S" type="text" placeholder="B2" oninput="gurdarDatosSc()">
+                                <input id="B1S" type="text" placeholder="B1" oninput="gurdarDatosSc()">
                                 
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <input id="C3" type="text" placeholder="C3">
-                                <input id="C2" type="text" placeholder="C2">
-                                <input id="C1" type="text" placeholder="C1">
+                                <input id="C3S" type="text" placeholder="C3" oninput="gurdarDatosSc()">
+                                <input id="C2S" type="text" placeholder="C2" oninput="gurdarDatosSc()">
+                                <input id="C1S" type="text" placeholder="C1" oninput="gurdarDatosSc()">
                             </td>
                         </tr>
                     </table>
                 </div>
                 <div id="imgMux">
-                    <img src="../img/MUX2.png" id="mux" title="Multiplexar" onclick="location.href='https://github.com/Cesar-coder-T/Multiplexor-TDM.git'">
+                    <img src="../img/MUX2.png" id="mux" title="Multiplexar" onclick="multiplexarAsc()">
                 </div>
                 <div id="tb">
-                    <table id="tabla2">
+                    <table id="tabla2A">
                         <tr>
                             <td></td>
                         </tr>
                         <tr>
                             <td>
-                                <input id="TR10" type="text" readonly>
-                                <input id="TR9" type="text" readonly>
-                                <input id="TR8" type="text" readonly>
-                                <input id="TR7" type="text" readonly>
-                                <input id="TR6" type="text" readonly>
-                                <input id="TR5" type="text" readonly>
-                                <input id="TR4" type="text" readonly>
-                                <input id="TR3" type="text" readonly>
-                                <input id="TR2" type="text" readonly>
-                                <input id="TR1" type="text" readonly>
+                                <input id="TR9S" type="text" readonly>
+                                <input id="TR8S" type="text" readonly>
+                                <input id="TR7S" type="text" readonly>
+                                <input id="TR6S" type="text" readonly>
+                                <input id="TR5S" type="text" readonly>
+                                <input id="TR4S" type="text" readonly>
+                                <input id="TR3S" type="text" readonly>
+                                <input id="TR2S" type="text" readonly>
+                                <input id="TR1S" type="text" readonly>
                             </td>
                         </tr>
                         <tr>
@@ -82,34 +82,37 @@
                     </table>
                 </div>
                 <div id="imgDmux">
-                    <img src="../img/DEMUX.png" id="dmux" title="Demultiplexar" onclick="location.href='https://github.com/Cesar-coder-T/Multiplexor-TDM.git'">
+                    <img src="../img/DEMUX.png" id="dmux" title="Demultiplexar" onclick="demultiplexarSc()">
                 </div>
                 <div id="tb">
                     <table id="tabla3">
                         <tr>
                             <td>
-                                <input id="A1" type="text" placeholder="A1">
-                                <input id="A2" type="text" placeholder="A2">
-                                <input id="A3" type="text" placeholder="A3">
+                                <input id="A1SC" type="text" placeholder="A1" readonly>
+                                <input id="A2SC" type="text" placeholder="A2" readonly>
+                                <input id="A3SC" type="text" placeholder="A3" readonly>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <input id="B1" type="text" placeholder="B1">
-                                <input id="B2" type="text" placeholder="B2">
-                                <input id="B3" type="text" placeholder="B3">
+                                <input id="B1SC" type="text" placeholder="B1" readonly>
+                                <input id="B2SC" type="text" placeholder="B2" readonly>
+                                <input id="B3SC" type="text" placeholder="B3" readonly>
                                 
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <input id="C1" type="text" placeholder="C1">
-                                <input id="C2" type="text" placeholder="C2">
-                                <input id="C3" type="text" placeholder="C3">
+                                <input id="C1SC" type="text" placeholder="C1" readonly>
+                                <input id="C2SC" type="text" placeholder="C2" readonly>
+                                <input id="C3SC" type="text" placeholder="C3" readonly>
                             </td>
                         </tr>
                     </table>
                 </div>
+            </div>
+            <div id="boton">
+                <button id="btn-clear" onclick="location.reload()">Limpiar</button>
             </div>
             <div class="clearfix"></div>
             <div id="subtitulo2">
@@ -143,15 +146,16 @@
                     </table>
                 </div>
                 <div id="imgMux">
-                    <img src="../img/MUX2.png" id="mux" title="Multiplexar" onclick="location.href='https://github.com/Cesar-coder-T/Multiplexor-TDM.git'">
+                    <img src="../img/MUX2.png" id="mux" title="Multiplexar" onclick="multiplexarSc()">
                 </div>
                 <div id="tb">
-                    <table id="tabla2A">
+                    <table id="tabla2">
                         <tr>
                             <td></td>
                         </tr>
                         <tr>
                             <td>
+                                <input id="TR10" type="text" readonly>
                                 <input id="TR9" type="text" readonly>
                                 <input id="TR8" type="text" readonly>
                                 <input id="TR7" type="text" readonly>
@@ -169,30 +173,30 @@
                     </table>
                 </div>
                 <div id="imgDmux">
-                    <img src="../img/DEMUX.png" id="dmux" title="Demultiplexar" onclick="location.href='https://github.com/Cesar-coder-T/Multiplexor-TDM.git'">
+                    <img src="../img/DEMUX.png" id="dmux" title="Demultiplexar" onclick="demultiplexarSc()">
                 </div>
                 <div id="tb">
                     <table id="tabla3">
                         <tr>
                             <td>
-                                <input id="A1" type="text" placeholder="A1">
-                                <input id="A2" type="text" placeholder="A2">
-                                <input id="A3" type="text" placeholder="A3">
+                                <input id="A1" type="text" placeholder="A1" readonly>
+                                <input id="A2" type="text" placeholder="A2" readonly>
+                                <input id="A3" type="text" placeholder="A3" readonly>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <input id="B1" type="text" placeholder="B1">
-                                <input id="B2" type="text" placeholder="B2">
-                                <input id="B3" type="text" placeholder="B3">
+                                <input id="B1" type="text" placeholder="B1" readonly>
+                                <input id="B2" type="text" placeholder="B2" readonly>
+                                <input id="B3" type="text" placeholder="B3" readonly>
                                 
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <input id="C1" type="text" placeholder="C1">
-                                <input id="C2" type="text" placeholder="C2">
-                                <input id="C3" type="text" placeholder="C3">
+                                <input id="C1" type="text" placeholder="C1" readonly>
+                                <input id="C2" type="text" placeholder="C2" readonly>
+                                <input id="C3" type="text" placeholder="C3" readonly>
                             </td>
                         </tr>
                     </table>
