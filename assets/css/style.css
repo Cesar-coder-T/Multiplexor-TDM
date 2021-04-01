@@ -40,7 +40,7 @@ body {
 #cuerpo2 {
     background: #523634;
     width: auto;
-    height: 800px;
+    height: 840px;
     margin: 0px auto;
 }
 #titulo2 {
@@ -237,5 +237,22 @@ input {
     cursor: pointer;
 }
 #btn-clear:hover {
+    background: #B6452C;
+}
+#btn-comprobar {
+    background: #301B28;
+    color: #DDC5A2;
+    border: none;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    height: 50px;
+    width: 150px;
+    border-radius: 5%;
+    margin-top: 73px;
+    margin-left: -1162px;
+    cursor: pointer;
+}
+#btn-comprobar:hover {
     background: #B6452C;
 }

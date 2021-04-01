@@ -1,7 +1,7 @@
 var A3S = null; var A2S = null; var A1S = null;
 var B3S = null; var B2S = null; var B1S = null;
 var C3S = null; var C2S = null; var C1S = null;
-function gurdarDatosSc(){
+function guardarDatosSc(){
  
     A3S = document.getElementById("A3S").value; A2S = document.getElementById("A2S").value; A1S = document.getElementById("A1S").value;
     B3S = document.getElementById("B3S").value; B2S = document.getElementById("B2S").value; B1S = document.getElementById("B1S").value;
@@ -46,45 +46,97 @@ function guardarDatosAsc(){
     }
 
 }
+function comprobar(){
+    //Condicional para ajustar posición si en la fila falta uno o dos valores.
+    for(var i=1; i<=9; i++){
 
-function multiplexarAsc(){
+        //Primera fila
+        if(vector[4] == "" && vector[7] == "" && vector[1] != ""){
+            vector[7] = vector[1];
+            vector[1] = "";
+        }else{
+            if(vector[4] == "" && vector[7] != ""){
+                vector[4] = vector[1];
+                vector[1] = "";
+            }else{
+                if(vector[7] == "" && vector[4] != ""){
+                    vector[7] = vector[4];
+                    vector[4] = vector[1];
+                    vector[1] = "";
+                }
+            }
+        }
+
+        //Segunda fila
+        if(vector[5] == "" && vector[8] == "" && vector[2] != ""){
+            vector[8] = vector[2];
+            vector[2] = "";
+        }else{
+            if(vector[5] == "" && vector[8] != ""){
+                vector[5] = vector[2];
+                vector[2] = "";
+            }else{
+                if(vector[8] == "" && vector[5] != ""){
+                    vector[8] = vector[5];
+                    vector[5] = vector[2];
+                    vector[2] = "";
+                }
+            }
+        }
+
+        //Tercera fila
+        if(vector[6] == "" && vector[9] == "" && vector[3] != ""){
+            vector[9] = vector[3];
+            vector[3] = "";
+        }else{
+            if(vector[6] == "" && vector[9] != ""){
+                vector[6] = vector[3];
+                vector[3] = "";
+            }else{
+                if(vector[9] == "" && vector[6] != ""){
+                    vector[9] = vector[6];
+                    vector[6] = vector[3];
+                    vector[3] = "";
+                }
+            }
+        }
+    }
 
     for(var i=1; i<=vector.length; i++){
-        if(vector[i] == "" && vector[i+1] != "" ){
-            vector[i] = vector[i+1];
-             vector.splice((i+1),1);
+        document.getElementById(""+(i)).value = vector[i];
+    }
+
+}
+function multiplexarAsc(){
+
+    //Se eliminan las posiciones vacias del vector.
+    for(var i=1; i<=vector.length; i++){
+        if(vector[1] == ""){
+            vector.splice(1, 1);
         }else{
-            if(vector[i+1] == "" && vector[i+2] != "" ){
-                vector[i] = vector[i+2];
-                vector.splice((i+2),1);
+            if(vector[2] == ""){
+                vector.splice(2, 1);
             }else{
-                if(vector[i+2] == "" && vector[i+3] != "" ){
-                    vector[i] = vector[i+3];
-                    vector.splice((i+3),1);
+                if(vector[3] == ""){
+                    vector.splice(3, 1);
                 }else{
-                    if(vector[i+3] == "" && vector[i+4] != "" ){
-                        vector[i] = vector[i+4];
-                        vector.splice((i+4),1);
+                    if(vector[4] == ""){
+                        vector.splice(4, 1);
                     }else{
-                        if(vector[i+4] == "" && vector[i+5] != "" ){
-                            vector[i] = vector[i+5];
-                            vector.splice((i+5),1);
+                        if(vector[5] == ""){
+                            vector.splice(5, 1);
                         }else{
-                            if(vector[i+5] == "" && vector[i+6] != "" ){
-                                vector[i] = vector[i+6];
-                                vector.splice((i+6),1);
+                            if(vector[6] == ""){
+                                vector.splice(6, 1);
                             }else{
-                                if(vector[i+6] == "" && vector[i+7] != "" ){
-                                    vector[i] = vector[i+7];
-                                    vector.splice((i+7),1);
+                                if(vector[7] == ""){
+                                    vector.splice(7, 1);
                                 }else{
-                                    if(vector[i+7] == "" && vector[i+8] != "" ){
-                                        vector[i] = vector[i+8];
-                                        vector.splice((i+8),1);
+                                    if(vector[8] == ""){
+                                        vector.splice(8, 1);
                                     }else{
-                                        if(vector[i+8] == "" && vector[i+9] != "" ){
-                                            vector[i] = vector[i+9];
-                                            vector.splice((i+9),1);
+                                        if(vector[9] == ""){
+                                            vector.splice(9, 1);
                                         }
                                     }
                                 }
@@ -95,19 +147,14 @@ function multiplexarAsc(){
             }
         }
     }
+
+    //Se muestran los datos en la trama.
     for(var i=1; i<=vector.length; i++){
-        if( i != vector.length ){
-            console.log(vector[i]);
+        if( i != vector.length){
             document.getElementById("TR"+(i)).value = vector[i];
         }
     }
 
-    //console.log(A1+" "+A2+" "+A3+" "+B1+" "+B2+" "+B3+" "+C1+" "+C2+" "+C3);
-
-    /*document.getElementById("TR1").value = A1; document.getElementById("TR2").value = B1; document.getElementById("TR3").value = C1;
-    document.getElementById("TR4").value = A2; document.getElementById("TR5").value = B2; document.getElementById("TR6").value = C2;
-    document.getElementById("TR7").value = A3; document.getElementById("TR8").value = B3; document.getElementById("TR9").value = C3;
-    */
 }
 function demultiplexarAsc(){
 
